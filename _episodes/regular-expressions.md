@@ -34,6 +34,8 @@ We're compiling a spreadsheet of metadata for a collection that's going to be di
 
 It looks pretty good, but we notice a few inconsistencies in the formatting of the title field. Since this metadata will be published online with the digitized files, we want to standardize it according to local guidelines.
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT7V2Xouu0QZzRURS_hFzsc5oyLBf4Cji3rfPGGFdsrAlTAyeDN6KqLWgXlNUCDi9Au9EZb8aPG_sgI/pubhtml?gid=1270318030&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
 For example, our local metadata style guide says that titles shouldn't end in periods, and they shouldn't be enclosed in square brackets. But the former archivist was trained in traditional library cataloging, so these quirks sometimes show up in collections they worked with, like this one.
 
 ### Use case #2: broken EAD
