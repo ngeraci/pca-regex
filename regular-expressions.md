@@ -9,26 +9,46 @@ objectives:
 keypoints:
 - Regular expressions are a language for pattern matching
 - "Test regular expressions interactively with [regex101.com](https://regex101.com/) or [RegExr.com](http://www.regexr.com/), and visualise them with [regexper.com](https://regexper.com/)."
-- "Test yourself with: [RegexCrossword.com/](https://regexcrossword.com/) or [our Multiple Choice Quiz](https://librarycarpentry.github.io/lc-data-intro/05-quiz/)."
+- "Test yourself with [RegexCrossword.com/](https://regexcrossword.com/)."
 ---
 
 ## Regular expressions
 
-Regular expressions are a concept and an implementation used in many different programming environments for sophisticated pattern matching. They are an incredibly powerful tool that can amplify your capacity to find, manage, and transform data and files. 
+Regular expressions are a way to match patterns in text. Think find-and-replace, but more powerful.
 
-A regular expression, often abbreviated to *regex*, is a method of using a sequence of characters to define a search to match strings, i.e. "find and replace"-like operations. In computation, a 'string' is a contiguous sequence of symbols or values. For example, a word, a date, a set of numbers (e.g., a phone number), or an alphanumeric value (e.g., an identifier). In library searches, we are most familiar with a small part of regular expressions known as the "wild card character," but there are many more features to the complete regular expressions syntax. Regular expressions will let you:
+Lots of programming languages use regular expressions. We can also use regular expressions in a variety of software applications that may already be familiar&mdash; Google Sheets,
+Oxygen XML Editor, and Notepad++ are just a few.
 
-- Match on types of characters (e.g. 'upper case letters', 'digits', 'spaces', etc.)
+In computation, a 'string' is a contiguous sequence of symbols or values. For example, a word, a date, a set of numbers (such as a phone number), or an alphanumeric value (such as an identifier), are all strings.
+
+Regular expressions will let you:
+
+- Match on types of characters ('upper case letters', 'digits', 'spaces', etc.)
+- Match characters based on their position in a string (beginning of line, end of line, etc.)
 - Match patterns that repeat any number of times
 - Capture the parts of the original string that match your pattern
 
-Regular expressions rely on the use of literal characters and metacharacters. A metacharacter is any ASCII character that has a special meaning. By using metacharacters and possibly literal characters, you can construct a regex for finding strings or files that match a pattern rather than a specific string. For example, say your organization wants to change the way they display telephone numbers on their website by removing the parentheses around the area code. Rather than search for each specific phone number (that could take forever and be prone to error) or searching for every open parenthesis character (could also take forever and return many false-positives), you could search for the pattern of a phone number. 
 
-Since regular expressions defines some ASCII characters as "metacharacters" that have more than their literal meaning, it is also important to be able to "escape" these metacharacters to use them for their normal, literal meaning. For example, the period (\.) means "match any character", but if you want to match a period (\.) then you will need to use a "\" in front of it to signal to the regular expression processor that you want to use the period as a plain old period and not a metacharacter. That notation is called "escaping" the special character. The concept of "escaping" special characters is shared across a variety of computational settings, including markdown and HTML.  
+### Use case #1: tidying titles
+We're compiling a spreadsheet of metadata for a collection that's going to be digitized. We're able to draw most of the information from an existing inventory for the collection, which was completed many years ago.
+
+It looks pretty good, but we notice a few inconsistencies in the formatting of the title field. Since this metadata will be published online with the digitized files, we want to standardize it according to local guidelines.
+
+For example, our local metadata style guide says that titles shouldn't end in periods, and they shouldn't be enclosed in square brackets. But the former archivist was trained in traditional library cataloging, so these quirks sometimes show up in collections they worked with, like this one.
+
+### Use case #2: broken EAD
+
+blahblahblah
+
+### So how does this work?
+
+Regular expressions rely on the use of literal characters and metacharacters. A metacharacter is any character that has a special meaning. By using metacharacters and possibly literal characters, you can construct a regex for finding strings or files that match a pattern rather than a specific string. For example, say your organization wants to change the way they display telephone numbers on their website by removing the parentheses around the area code. Rather than search for each specific phone number (that could take forever and be prone to error) or searching for every open parenthesis character (could also take forever and return many false-positives), you could search for the pattern of a phone number. 
+
+Since regular expressions define some characters as "metacharacters" that have more than their literal meaning, it is also important to be able to "escape" these metacharacters to use them for their normal, literal meaning. For example, the period (\.) means "match any character", but if you want to match a period (\.) then you will need to use a "\" in front of it to signal to the regular expression processor that you want to use the period as a plain old period and not a metacharacter. That notation is called "escaping" the special character.
 
 A very simple use of a regular expression would be to locate the same word spelled two different ways. For example the regular expression `organi[sz]e` matches both "organise" and "organize". But it would also match `reorganise`, `reorganize`, `organises`, `organizes`, `organised`, `organized`, etc.
 
-### Learning common regex metacharacters
+### Learning common metacharacters
 Square brackets can be used to define a list or range of characters to be found. So:
 
 - `[ABC]` matches A or B or C
