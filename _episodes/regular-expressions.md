@@ -238,8 +238,8 @@ We'll compose our regular expressions, then enter them in the "Find" field of Fi
 > > <bibseries>.*<\/bibseries>
 > > ~~~
 > > By using the `.` metacharacter (match any character) and the `*` metacharacter (previous character repeated zero or more times) together, surrounded by the `<bibseries>` tag, we can match any combination of characters that appear between those two tags.
-
-We also have to be careful to escape the slash in the closing `</bibseries>` tag,
+> >
+> >We also have to be careful to escape the slash in the closing `</bibseries>` tag,
 > {: .solution}
 {: .challenge}
 
