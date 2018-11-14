@@ -188,10 +188,71 @@ So, what are these going to match?
 > {: .solution}
 {: .challenge}
 
+### Use cases
 
-### Exercise
+> ## Tidying titles
+> Match a period only at the end of a line.
+>
+> > ## Solution
+> > ~~~
+> > `\.$`
+> > ~~~
+> > The backslash escapes the period, matching literal periods instead of using it as a wildcard. The dollar sign matches the end of a line.
+> {: .solution}
+{: .challenge}
 
-Work with a partner or group on the exercises below. When you think you have the right answer, check it against the solution.
+> ## Tidying titles
+> Match a left square bracket only at the beginning of a line.
+>
+> > ## Solution
+> > ~~~
+> > `^\[`
+> > ~~~
+> > The caret matches the beginning of a line. The backslash escapes the square bracket, matching literal square brackets instead of using it as a metacharacter.
+> {: .solution}
+{: .challenge}
+
+> ## Tidying titles
+> Match a right square bracket only at the end of a line.
+>
+> > ## Solution
+> > ~~~
+> > `\]$`
+> > ~~~
+> > The backslash escapes the square bracket, matching literal square brackets instead of using it as a metacharacter. The dollar sign matches the end of a line.
+> {: .solution}
+{: .challenge}
+
+> ## Legacy EAD
+> Match all text that is enclosed in
+>
+> > ## Solution
+> > ~~~
+> > `\]$`
+> > ~~~
+> > The backslash escapes the square bracket, matching literal square brackets instead of using it as a metacharacter. The dollar sign matches the end of a line.
+> {: .solution}
+{: .challenge}
+
+
+
+
+
+> ## Legacy EAD
+> Match all text that is enclosed in a `<bibseries>` tag, as well as the tags. For example, the solution should be able to match `<bibseries>Water Resources Publications</bibseries>`, `<bibseries>324832489</bibseries>`, and `<bibseries>**% Weird Legacy Formatting %**</bibseries>`.
+>
+> > ## Solution
+> > ~~~
+> > `<bibseries>.*<\/bibseries>`
+> > ~~~
+> > By using the `.` metacharacter (match any character) and the `*` metacharacter (previous character repeated zero or more times) together, surrounded by the `<bibseries>` tag, we can match any combination of characters that appear between those two tags. We also have to be careful to escpae the slash in the closing `</bibseries>` tag,
+> {: .solution}
+{: .challenge}
+
+
+### More exercises
+
+We'll cover these in the workshop if we have time, working with partners or small groups. If not, you can refer back to these after the workshop to practice on your own.
 
 > ## Using square brackets
 > What will the regular expression `Fr[ea]nc[eh]` match?
