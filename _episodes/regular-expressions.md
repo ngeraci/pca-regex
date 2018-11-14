@@ -16,13 +16,13 @@ keypoints:
 
 Regular expressions are a way to match patterns in text. Think find-and-replace, but more powerful.
 
-Lots of programming languages use regular expressions. We can also use regular expressions in a variety of software applications that may already be familiar&mdash; Google Sheets, Oxygen XML Editor, and Notepad++ are just a few.
+Lots of programming languages use regular expressions. We can also use regular expressions in a variety of software applications that may already be familiar-- Google Sheets, Oxygen XML Editor, and Notepad++ are just a few.
 
-In computation, a 'string' is a contiguous sequence of symbols or values. For example, a word, a date, a set of numbers (such as a phone number), or an alphanumeric value (such as an identifier), are all strings.
+In computation, a string is a contiguous sequence of symbols or values. For example, a word, a date, a set of numbers (such as a phone number), or an alphanumeric value (such as an identifier), are all strings.
 
 Regular expressions will let you:
 
-- Match on types of characters ('upper case letters', 'digits', 'spaces', etc.)
+- Match on types of characters ("upper case letters", "digits", "spaces", etc.)
 - Match characters based on their position in a string (beginning of line, end of line, etc.)
 - Match patterns that repeat any number of times
 - Capture the parts of the original string that match your pattern
@@ -31,19 +31,22 @@ Regular expressions will let you:
 ### Use case #1: tidying titles
 We're compiling a spreadsheet of metadata for a collection that's going to be digitized. We're able to draw most of the information from an existing inventory for the collection, which was completed many years ago.
 
-It looks pretty good, but we notice a few inconsistencies in the formatting of the title field. Since this metadata will be published online with the digitized files, we want to standardize it according to local guidelines. For example, our local metadata style guide says that titles shouldn't end in periods, and they shouldn't be enclosed in square brackets. But the former archivist was trained in traditional library cataloging, so these quirks sometimes show up in collections they worked with, like this one.
+It looks pretty good, but we notice a few inconsistencies in the formatting of the title field, and want to standardize it according to local guidelines. For example, our local metadata style guide says that titles shouldn't end in periods, and they shouldn't be enclosed in square brackets.
 
 Doing a simple find-and-replace on periods and square brackets in the title column would get rid of the characters we don't want. But it also might get rid of some that we do want, like periods that are used in abbreviations, not at the end of a title.
 
-### Use case #2: broken EAD
+### Use case #2: legacy EAD
 
-blahblahblah
+You recently found some previously-unknown-to-you EAD files tucked away in a folder on a shared drive. You'd like to get them ingested into your archival management system, but you're running into a number of errors. For example, there's a tag, `<bibseries>`, that appears in several of the files, that's deprecated in current versions of EAD.
+
+You've determined you don't need to keep the data in the `<bibseries>` field-- it's repeated in other fields-- and you want to remove it. But because each instance of `<bibseries>` contains different text (like `<bibseries>Water Resources Publications</bibseries>` and `<bibseries>Faculty</bibseries>`), you need to be able to find and replace any text that is between two of the unwanted tags.
+
 
 ### So how does this work?
 
-Regular expressions use both literal characters&emdash; characters that match themselves&emdash; and metacharacters, or special characters&emdash; symbols that can match a range or category of characters, or have other special meanings. This lets us construct regular expressions to find text that matches a pattern, rather than a specific string.
+Regular expressions use both literal characters-- characters that match themselves-- and metacharacters, or special characters-- symbols that can match a range or category of characters, or have other special meanings. This lets us construct regular expressions to find text that matches a pattern, rather than a specific string.
 
-For example, say your organization wants to change the way they display telephone numbers on their website by removing the parentheses around the area code. Rather than search for each specific phone number (that could take forever and be prone to error) or searching for every open parenthesis character (could also take forever and return many false-positives), you could design a regular expression that searches for the pattern of a phone number. 
+For example, say your organization wants to change the way they display telephone numbers on their website by removing the parentheses around the area code. Rather than search for each specific phone number (that could take forever and be prone to error) or searching for every open parenthesis character (could also take forever and return many false-positives), you could design a regular expression that searches for the pattern of a phone number.
 
 Since regular expressions define some characters as "metacharacters" that have more than their literal meaning, it is also important to be able to "escape" these metacharacters to use them for their normal, literal meaning. For example, the period (\.) is a wildcard that means "match any character", but if you want to match an actual period (\.) then you will need to use a "\" in front of it to signal to the regular expression processor that you want to use the period as a plain old period and not a metacharacter. That notation is called "escaping" the special character.
 
@@ -188,11 +191,7 @@ So, what are these going to match?
 
 ### Exercise
 
-Work in teams of 4-6 on the exercises below. When you think you have the right answer, check it against the solution. 
-
-When you finish, split your team into two groups and write each other some tests. These should include a) strings you want the other team to write regex for and b) regular expressions you want the other team to work out what they would match. 
-
-Then test each other on the answers. If you want to check your logic, use [regex101](https://regex101.com/), [myregexp](http://myregexp.com/), or [regex pal](http://www.regexpal.com/) [regexper.com](http://regexper.com/): the first three help you see what text your regular expression will match, the latter visualises the workflow of a regular expression.
+Work with a partner or group on the exercises below. When you think you have the right answer, check it against the solution.
 
 > ## Using square brackets
 > What will the regular expression `Fr[ea]nc[eh]` match?
