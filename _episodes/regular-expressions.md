@@ -28,15 +28,14 @@ Regular expressions will let you:
 - Capture the parts of the original string that match your pattern
 
 
-### Use case #1: tidying titles
+### Use case 1: tidying titles
 We're compiling a spreadsheet of metadata for a collection that's going to be digitized. We're able to draw most of the information from an existing inventory for the collection, which was completed many years ago.
 
 It looks pretty good, but we notice a few inconsistencies in the formatting of the title field, and want to standardize it according to local guidelines. For example, our local metadata style guide says that titles shouldn't end in periods, and they shouldn't be enclosed in square brackets.
 
 Doing a simple find-and-replace on periods and square brackets in the title column would get rid of the characters we don't want. But it also might get rid of some that we do want, like periods that are used in abbreviations, not at the end of a title.
 
-### Use case #2: legacy EAD
-
+### Use case 2: legacy EAD
 You recently found some previously-unknown-to-you EAD files tucked away in a folder on a shared drive. You'd like to get them ingested into your current archival management system, but you're running into a number of errors. For example, there's a tag, `<bibseries>`, that appears in several of the files, that's deprecated in current versions of EAD.
 
 You've determined you don't need to keep the data in the `<bibseries>` field, and want to remove it. But because each instance of `<bibseries>` contains different text (like `<bibseries>Water Resources Publications</bibseries>` and `<bibseries>Leadership</bibseries>`), you need to be able to find and replace any text that is between two of the unwanted tags.
