@@ -16,7 +16,7 @@ keypoints:
 
 Regular expressions are a way to match patterns in text. Think find-and-replace, but more powerful.
 
-Lots of programming languages use regular expressions. We can also use regular expressions in a variety of software applications that may already be familiar-- Google Sheets, Oxygen XML Editor, and Notepad++ are just a few.
+Lots of programming languages use regular expressions. We can also use regular expressions in a variety of software applications that may already be familiar-- Google Sheets, Oxygen XML Editor, OpenRefine, and Notepad++ are just a few.
 
 In computation, a string is a contiguous sequence of symbols or values. For example, a word, a date, a set of numbers (such as a phone number), or an alphanumeric value (such as an identifier), are all strings.
 
@@ -189,6 +189,13 @@ So, what are these going to match?
 {: .challenge}
 
 ### Use cases
+So how will regular expressions help us solve our problems with irregular metadata titles and EAD tags?
+
+For our metadata spreadsheet, we can use Find and Replace in Google Sheets (sadly, this doesn't work in Excel). Be sure to check the box that says "Search using regular expressions."
+
+For our EAD files, we can use Find and Replace in Oxygen, Notepad++, or most other plain-text editors designed for programming. These will also have a check box in the Find and Replace dialog that says "Regular Expressions" or something like "Search using regular expressions."
+
+We'll compose our regular expressions, then enter them in the "Find" field of Find and Replace. In these cases, we want to delete the matched text, so we'll leave "Replace" blank.
 
 > ## Tidying titles
 > Match a period only at the end of a line.
@@ -228,9 +235,11 @@ So, what are these going to match?
 >
 > > ## Solution
 > > ~~~
-> > <bibseries>.\*<\/bibseries>
+> > <bibseries>.*<\/bibseries>
 > > ~~~
-> > By using the `.` metacharacter (match any character) and the `*` metacharacter (previous character repeated zero or more times) together, surrounded by the `<bibseries>` tag, we can match any combination of characters that appear between those two tags. We also have to be careful to escpae the slash in the closing `</bibseries>` tag,
+> > By using the `.` metacharacter (match any character) and the `*` metacharacter (previous character repeated zero or more times) together, surrounded by the `<bibseries>` tag, we can match any combination of characters that appear between those two tags.
+
+We also have to be careful to escape the slash in the closing `</bibseries>` tag,
 > {: .solution}
 {: .challenge}
 
