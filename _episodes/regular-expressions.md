@@ -37,9 +37,9 @@ Doing a simple find-and-replace on periods and square brackets in the title colu
 
 ### Use case #2: legacy EAD
 
-You recently found some previously-unknown-to-you EAD files tucked away in a folder on a shared drive. You'd like to get them ingested into your archival management system, but you're running into a number of errors. For example, there's a tag, `<bibseries>`, that appears in several of the files, that's deprecated in current versions of EAD.
+You recently found some previously-unknown-to-you EAD files tucked away in a folder on a shared drive. You'd like to get them ingested into your current archival management system, but you're running into a number of errors. For example, there's a tag, `<bibseries>`, that appears in several of the files, that's deprecated in current versions of EAD.
 
-You've determined you don't need to keep the data in the `<bibseries>` field-- it's repeated in other fields-- and you want to remove it. But because each instance of `<bibseries>` contains different text (like `<bibseries>Water Resources Publications</bibseries>` and `<bibseries>Faculty</bibseries>`), you need to be able to find and replace any text that is between two of the unwanted tags.
+You've determined you don't need to keep the data in the `<bibseries>` field, and want to remove it. But because each instance of `<bibseries>` contains different text (like `<bibseries>Water Resources Publications</bibseries>` and `<bibseries>Leadership</bibseries>`), you need to be able to find and replace any text that is between two of the unwanted tags.
 
 
 ### So how does this work?
