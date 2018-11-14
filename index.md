@@ -1,17 +1,15 @@
 ---
 layout: episode
 root: .
-title: "Regular Expressions"
-teaching: 20
-exercises: 25
+title: "Practical Coding for Archivists: Regular Expressions"
 questions:
 - How can you imagine using regular expressions in your work?
 objectives:
 - Use regular expressions in searches
 keypoints:
 - Regular expressions are a method for pattern matching
-- "Test regular expressions interactively with [regex101.com](https://regex101.com/) or [RegExr.com](http://www.regexr.com/), and visualise them with [regexper.com](https://regexper.com/)."
-- "Test yourself with [RegexCrossword.com/](https://regexcrossword.com/)."
+- "For further practice, try the interactive tutorial at [RegexOne](https://regexone.com/), or the puzzle challenges at [Regex Crossword](https://regexcrossword.com/)."
+- "Sites like [Regex Pal](https://www.regexpal.com/) and [RegExr](https://regexr.com/) are useful for interactively testing regular expressions."
 ---
 
 ## Regular expressions
