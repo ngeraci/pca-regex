@@ -364,13 +364,3 @@ We'll cover these in the workshop if we have time, working with partners or smal
 > > Without word boundaries you will find that this matches any text you put before `British` or `Manchester`. Nevertheless, the regular expression does a good job on the first look up and may be need to be refined on a second, depending on your data.
 > {: .solution}
 {: .challenge}
-
-<div>
-    <h2>Attribution</h2>
-    <p>
-        This workshop contains material adapted and modified
-        from work that is &copy; 2016-2018 <a href="http://software-carpentry.org">Software Carpentry</a>
-        and made available under a <a href="https://creativecommons.org/licenses/by/4.0/">
-        Creative Commons Attribution</a> license.
-    </p>
-</div>
