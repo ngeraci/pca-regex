@@ -7,7 +7,7 @@ questions:
 objectives:
 - Use regular expressions in searches
 keypoints:
-- Regular expressions are a method for pattern matching
+- Regular expressions are a powerful method for matching patterns in text.
 - "For further practice, try the interactive tutorial at [RegexOne](https://regexone.com/), or the puzzle challenges at [Regex Crossword](https://regexcrossword.com/)."
 - "Sites like [Regex Pal](https://www.regexpal.com/) and [RegExr](https://regexr.com/) are useful for interactively testing regular expressions."
 ---
