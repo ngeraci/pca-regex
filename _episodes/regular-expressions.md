@@ -195,7 +195,7 @@ So, what are these going to match?
 >
 > > ## Solution
 > > ~~~
-> > `\.$`
+> > \.$
 > > ~~~
 > > The backslash escapes the period, matching literal periods instead of using it as a wildcard. The dollar sign matches the end of a line.
 > {: .solution}
@@ -206,7 +206,7 @@ So, what are these going to match?
 >
 > > ## Solution
 > > ~~~
-> > `^\[`
+> > ^\[
 > > ~~~
 > > The caret matches the beginning of a line. The backslash escapes the square bracket, matching literal square brackets instead of using it as a metacharacter.
 > {: .solution}
@@ -217,33 +217,18 @@ So, what are these going to match?
 >
 > > ## Solution
 > > ~~~
-> > `\]$`
+> > \]$
 > > ~~~
 > > The backslash escapes the square bracket, matching literal square brackets instead of using it as a metacharacter. The dollar sign matches the end of a line.
 > {: .solution}
 {: .challenge}
-
-> ## Legacy EAD
-> Match all text that is enclosed in
->
-> > ## Solution
-> > ~~~
-> > `\]$`
-> > ~~~
-> > The backslash escapes the square bracket, matching literal square brackets instead of using it as a metacharacter. The dollar sign matches the end of a line.
-> {: .solution}
-{: .challenge}
-
-
-
-
 
 > ## Legacy EAD
 > Match all text that is enclosed in a `<bibseries>` tag, as well as the tags. For example, the solution should be able to match `<bibseries>Water Resources Publications</bibseries>`, `<bibseries>324832489</bibseries>`, and `<bibseries>**% Weird Legacy Formatting %**</bibseries>`.
 >
 > > ## Solution
 > > ~~~
-> > `<bibseries>.*<\/bibseries>`
+> > <bibseries>.\*<\/bibseries>
 > > ~~~
 > > By using the `.` metacharacter (match any character) and the `*` metacharacter (previous character repeated zero or more times) together, surrounded by the `<bibseries>` tag, we can match any combination of characters that appear between those two tags. We also have to be careful to escpae the slash in the closing `</bibseries>` tag,
 > {: .solution}
